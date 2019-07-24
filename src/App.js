@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import './App.css';
+import Form from './Components/Form'
 
 function App() {
-  const [teamMember, setTeamMember] = useState()
+  const [teamMemberList, setTeamMemberList] = useState([])
   return (
     <div className="App">
-     
+     <Form />
     </div>
   );
 }
