@@ -16,12 +16,23 @@ function Form() {
 
     return(
         <form onSubmit={handleSubmit}>
-            
+            <fieldset>
+                <legend>Team Member Sign-up</legend>
+                <div>
+                    <label for="name">Name
+                    <div>
+                        <input 
+                            type="text"
+                            name="name"
+                            placeholder="Your name here"
+                            value={teamMember.name}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    </label>
+                </div>
+            </fieldset>
         </form>
-
-        <div>
-            <p>HI</p>
-        </div>
     )
 }
 
