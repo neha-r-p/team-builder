@@ -13,11 +13,11 @@ function Form() {
       [event.target.name]: event.target.value
     };
     console.log(
-        "handleChange",
-        event.target.name,
-        event.target.value,
-        updatedTeamMember
-      );
+      "handleChange",
+      event.target.name,
+      event.target.value,
+      updatedTeamMember
+    );
 
     setTeamMember(updatedTeamMember);
   }
@@ -45,9 +45,35 @@ function Form() {
             </div>
           </label>
         </div>
-        <button type="submit">
-          Submit
-        </button>
+        <div>
+          <label for="email">
+            E-mail
+            <div>
+              <input
+                type="text"
+                name="email"
+                placeholder="yourEmail@example.com"
+                value={teamMember.email}
+                onChange={handleChange}
+              />
+            </div>
+          </label>
+        </div>
+        <div>
+          <label for="role">
+            Team Role
+            <div>
+              <input
+                type="text"
+                name="role"
+                placeholder="E.g. frontend engineer"
+                value={teamMember.role}
+                onChange={handleChange}
+              />
+            </div>
+          </label>
+        </div>
+        <button type="submit">Submit</button>
       </fieldset>
     </form>
   );
