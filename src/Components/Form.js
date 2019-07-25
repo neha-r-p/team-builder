@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
-function Form() {
-  const [teamMember, setTeamMember] = useState({
+function Form(props) {
+    // console.log("props", props)
+ 
+    const [teamMember, setTeamMember] = useState({
     name: "",
     email: "",
     role: ""
@@ -12,12 +14,12 @@ function Form() {
       ...teamMember,
       [event.target.name]: event.target.value
     };
-    console.log(
-      "handleChange",
-      event.target.name,
-      event.target.value,
-      updatedTeamMember
-    );
+    // console.log(
+    //   "handleChange",
+    //   event.target.name,
+    //   event.target.value,
+    //   updatedTeamMember
+    // );
 
     setTeamMember(updatedTeamMember);
   }
@@ -25,6 +27,7 @@ function Form() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log("team member state", teamMember);
+    props.setMemberList(memberList => [...memberList, teamMember])
   }
 
   return (
