@@ -34,7 +34,7 @@ function Form(props) {
     <form onSubmit={handleSubmit}>
       <fieldset>
         <legend>Team Member Sign-up</legend>
-        <div>
+        <div className="inputField">
           <label for="name">
             Name
             <div>
@@ -48,7 +48,7 @@ function Form(props) {
             </div>
           </label>
         </div>
-        <div>
+        <div className="inputField">
           <label for="email">
             E-mail
             <div>
@@ -62,7 +62,7 @@ function Form(props) {
             </div>
           </label>
         </div>
-        <div>
+        <div className="inputField">
           <label for="role">
             Team Role
             <div>
